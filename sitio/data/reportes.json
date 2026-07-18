@@ -1,0 +1,38 @@
+{
+  "tiene_reportes": true,
+  "reportes": [
+    {
+      "ticker": "ENELAM.SN",
+      "nombre_empresa": "Enel Americas",
+      "flag_metodo": "BASELINE",
+      "tesis_resumida": "Utility latinoamericana de escala (26 GW distribuye / 13 GW genera, 23 mn clientes) transando a EV/EBITDA 4,2x — percentil 25 de su propia historia — mientras el EBITDA crece +14% (2025) con guidance de +22% al 2028 y una política de remuneración agresiva: dividendo 30% del NI más recompras (4% ejecutada en 2025 a CLP 105,23, 32% sobre el precio actual; nueva recompra de 5% a votarse el 23-jul-2026 con premio de hast…",
+      "valor_pesimista": 82.3,
+      "valor_central": 118.4,
+      "valor_optimista": 196.6,
+      "fecha": "2026-07-11",
+      "archivo_markdown_path": "estrategias/reportes/ENELAM.SN/2026-07-11-ENELAM.SN.md"
+    },
+    {
+      "ticker": "MALLPLAZA.SN",
+      "nombre_empresa": "Plaza",
+      "flag_metodo": "BASELINE",
+      "tesis_resumida": "Mallplaza es el mejor operador de malls de la región andina (ocupación 95,9%, margen EBITDA 80,5%, contratos a 6,7 años 93% fijos e indexados, DFN/EBITDA 2,5x) y su integración de Perú fue un éxito operativo. Pero a CLP 3.900 el mercado paga ~19x EV/EBITDA, ~21x FFO y 1,9x el NAV de tasación: el precio ya incorpora la ejecución perfecta del plan de crecimiento. El DCF baseline (V central post-iliquidez ≈ 3.107) deja …",
+      "valor_pesimista": 1584.1,
+      "valor_central": 3107.7,
+      "valor_optimista": 4875.1,
+      "fecha": "2026-07-11",
+      "archivo_markdown_path": "estrategias/reportes/MALLPLAZA.SN/2026-07-11-MALLPLAZA.SN.md"
+    },
+    {
+      "ticker": "SMU.SN",
+      "nombre_empresa": "SMU",
+      "flag_metodo": "BASELINE",
+      "tesis_resumida": "SMU es el tercer actor supermercadista chileno (Unimarc/Alvi/Super10 + ~2% Perú), con margen bruto en máximos (32,2%) y carry aparente de 7,5% que el screening premió. La tesis de valor NO se sostiene al precio actual: la utilidad 2025 está inflada por ventas de activos (44 de 63 MMM), el dividendo se financió en parte con esos one-offs, el EV/EBITDA está en el percentil 100 de su propia historia y el DCF central que…",
+      "valor_pesimista": 54.2,
+      "valor_central": 130.9,
+      "valor_optimista": 207.9,
+      "fecha": "2026-07-11",
+      "archivo_markdown_path": "estrategias/reportes/SMU.SN/2026-07-11-SMU.SN.md"
+    }
+  ]
+}

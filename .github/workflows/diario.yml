@@ -1,0 +1,72 @@
+name: Actualizacion diaria
+
+on:
+  schedule:
+    # 22:30 UTC, lunes a viernes (dias habiles). Ajustar si Chile cambia de
+    # huso horario (UTC-3/UTC-4 segun horario de verano).
+    - cron: "30 22 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: diario
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: pip install -r scripts/requirements.txt
+
+      - name: Guard de publicacion
+        run: python3 scripts/guard_no_privado.py
+
+      - name: Captura diaria
+        run: python3 scripts/captura_diaria.py
+
+      - name: Guard de publicacion (post-captura)
+        run: python3 scripts/guard_no_privado.py
+
+      - name: Commit si hay cambios
+        id: commit
+        run: |
+          git config user.name "meridiano-bot"
+          git config user.email "meridiano-bot@users.noreply.github.com"
+          git add data/ sitio/data/
+          if git diff --cached --quiet; then
+            echo "sin_cambios=true" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Captura diaria $(date -u +%Y-%m-%d)"
+            git push
+            echo "sin_cambios=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Configurar credenciales AWS
+        if: steps.commit.outputs.sin_cambios == 'false'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Sync sitio a S3
+        if: steps.commit.outputs.sin_cambios == 'false'
+        run: aws s3 sync sitio/ "s3://${{ secrets.MERIDIANO_S3_BUCKET }}/" --delete
+
+      - name: Invalidar CloudFront
+        if: steps.commit.outputs.sin_cambios == 'false'
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ secrets.MERIDIANO_CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --paths "/*"

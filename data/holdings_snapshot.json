@@ -1,0 +1,8 @@
+{
+  "portfolio_nombre": "Portafolio 1 — Value Chile",
+  "capital_inicial_clp": 100000000.0,
+  "fecha_inicio": "2026-07-14",
+  "benchmark_ref": "Benchmark sintetico equiponderado de 1d (proxy declarado) -- IPSA oficial vigente pendiente de resolver fuente real (^IPSA de Yahoo muerto desde 2019, 1d hallazgo #1).",
+  "caja_actual_clp": 100000000.0,
+  "holdings": []
+}

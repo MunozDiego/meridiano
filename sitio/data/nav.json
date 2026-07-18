@@ -1,0 +1,39 @@
+{
+  "tiene_transacciones": false,
+  "fecha_inicio": "2026-07-14",
+  "fecha_fin": "2026-07-14",
+  "benchmark_label": "Benchmark: IPSA (proxy sintético equiponderado hasta 2026-07-13, serie viva desde 2026-07-14)",
+  "cifras": {
+    "clp": {
+      "nav_actual": 100000000.0,
+      "retorno_acumulado": 0.0,
+      "retorno_anualizado": 0.0,
+      "volatilidad_anualizada": 0.0,
+      "max_drawdown": 0.0
+    },
+    "uf": {
+      "nav_actual": 2448.2927,
+      "retorno_acumulado": 0.0,
+      "retorno_anualizado": 0.0
+    }
+  },
+  "serie": {
+    "clp": [
+      {
+        "fecha": "2026-07-14",
+        "nav": 100000000.0,
+        "index100": 100.0,
+        "benchmark_index100": 100.0
+      }
+    ],
+    "uf": [
+      {
+        "fecha": "2026-07-14",
+        "nav": 2448.2927,
+        "index100": 100.0,
+        "benchmark_index100": 100.0
+      }
+    ]
+  },
+  "anotaciones": []
+}

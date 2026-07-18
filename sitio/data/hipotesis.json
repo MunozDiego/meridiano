@@ -1,0 +1,32 @@
+{
+  "hipotesis": [
+    {
+      "id": "H1",
+      "hipotesis": "El descuento por iliquidez (Amihud-Mendelson) esta precificado en el mercado chileno: papeles menos liquidos rinden un spread positivo tras controlar por tamano y riesgo.",
+      "test": "T1 (fase-0 2c): spread size-neutral > 0 en >70% de los cortes transversales y bootstrap p(spread<=0) < 0,10.",
+      "veredicto": "EN PRUEBA - evidencia en contra",
+      "veredicto_clase": "en_prueba"
+    },
+    {
+      "id": "H2",
+      "hipotesis": "El MoS dinamico (valoracion 'con reloj', que pondera dividendos, normalizacion ciclica y velocidad de convergencia alpha) mejora la senal de valor frente al MoS estatico.",
+      "test": "T2-T4 (fase-0 2c): T2 Delta-rho<0 en >=2 horizontes P/E y P/B; T3 la inversion de signo pierde significancia al normalizar; T4 alpha>0 en los 3 terciles de liquidez/concentracion con orden estable en subperiodos.",
+      "veredicto": "EN PRUEBA - evidencia en contra (del término α; ver desagregado)",
+      "veredicto_clase": "en_prueba"
+    },
+    {
+      "id": "H3",
+      "hipotesis": "Los flujos mensuales de compra de las AFP explican parte de la reversion de precios de las acciones del IPSA (presion de flujo, no solo fundamento).",
+      "test": "T5 (fase-0 2c): coeficiente gamma1 < 0, bootstrap por tickers p(gamma1>=0) < 0,10, y monotonicidad en Amihud.",
+      "veredicto": "DESCARTADA",
+      "veredicto_clase": "rechazada"
+    },
+    {
+      "id": "H4",
+      "hipotesis": "El descuento de holdings sobre filiales se explica en parte por iliquidez (separable del descuento por gobierno corporativo/control).",
+      "test": "T6 (fase-0 2c): beta1 > 0 con bootstrap por bloques-año p(beta1<=0) < 0,10, y beta0 por par ordenado segun calidad de gobierno corporativo.",
+      "veredicto": "EN PRUEBA - evidencia en contra (componente de iliquidez)",
+      "veredicto_clase": "en_prueba"
+    }
+  ]
+}
