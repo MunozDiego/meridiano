@@ -1,0 +1,60 @@
+{
+  "watchlist": [
+    {
+      "ticker": "CCU.SN",
+      "precio_maximo_compra": 3453.2,
+      "fecha_reporte": "2026-07-20",
+      "fecha_revision_forzada": "2028-07-20",
+      "estado": "vigente"
+    },
+    {
+      "ticker": "CONCHATORO.SN",
+      "precio_maximo_compra": 758.2,
+      "fecha_reporte": "2026-07-20",
+      "fecha_revision_forzada": "2028-07-20",
+      "estado": "vigente"
+    },
+    {
+      "ticker": "COPEC.SN",
+      "precio_maximo_compra": 5753.2,
+      "fecha_reporte": "2026-07-20",
+      "fecha_revision_forzada": "2028-07-20",
+      "estado": "vigente"
+    },
+    {
+      "ticker": "ENELAM.SN",
+      "precio_maximo_compra": 82.9,
+      "fecha_reporte": "2026-07-11",
+      "fecha_revision_forzada": "2028-07-11",
+      "estado": "vigente"
+    },
+    {
+      "ticker": "LTM.SN",
+      "precio_maximo_compra": 18.84,
+      "fecha_reporte": "2026-07-20",
+      "fecha_revision_forzada": "2028-07-20",
+      "estado": "vigente"
+    },
+    {
+      "ticker": "MALLPLAZA.SN",
+      "precio_maximo_compra": 2330.1,
+      "fecha_reporte": "2026-07-11",
+      "fecha_revision_forzada": "2028-07-11",
+      "estado": "vigente"
+    },
+    {
+      "ticker": "SMU.SN",
+      "precio_maximo_compra": 91.6,
+      "fecha_reporte": "2026-07-11",
+      "fecha_revision_forzada": "2028-07-11",
+      "estado": "vigente"
+    },
+    {
+      "ticker": "WATTS.SN",
+      "precio_maximo_compra": 406.2,
+      "fecha_reporte": "2026-07-20",
+      "fecha_revision_forzada": "2028-07-20",
+      "estado": "vigente"
+    }
+  ]
+}

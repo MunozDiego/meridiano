@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: diario
@@ -35,8 +36,16 @@ jobs:
       - name: Captura diaria
         run: python3 scripts/captura_diaria.py
 
+      - name: Monitor de watchlist
+        run: python3 scripts/monitor_watchlist.py
+
       - name: Guard de publicacion (post-captura)
         run: python3 scripts/guard_no_privado.py
+
+      - name: Alertas de watchlist -> issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/crear_issues_watchlist.py
 
       - name: Commit si hay cambios
         id: commit
